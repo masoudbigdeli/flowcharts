@@ -19,7 +19,6 @@ export function ContainerRenderer({
   style = {},
   customContainer,
 }: ContainerRendererProps) {
-  // ✅ FIX: Read colors from preset tokens, not from hardcoded theme string
   const { preset } = useFlowChartContext()
   const tokens = preset.tokens
 

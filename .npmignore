@@ -1,11 +1,21 @@
+# Source — consumers only need dist/
 src/
+
+# Example app — not part of the package
 example/
-*.config.ts
-*.config.js
+
+# Build tooling
+vite.config.ts
 tsconfig.json
-.gitignore
 .eslintrc*
+
+# Dev / CI
+.github/
+.gitignore
 node_modules/
 coverage/
 *.log
 *.tsbuildinfo
+
+# Sourcemaps (not published)
+dist/*.map

@@ -137,19 +137,12 @@ export const EdgeTypeRenderer: FC<EdgeRenderProps & { edgeType?: EdgeType }> = (
     )
   }
 
-  // default: dashed when not visited, solid when visited
+  // default: dashed when not visited, solid when visited — no arrowhead
   const stroke = isVisited ? visitedStroke : defaultStroke
   const strokeWidth = isVisited ? visitedWidth : defaultWidth
   const dash = isVisited ? undefined : defaultDash
   return (
-    <>
-      <defs>
-        <marker id={arrowId} markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L6,3 z" fill={stroke} />
-        </marker>
-      </defs>
-      <path d={path} fill="none" stroke={stroke} strokeWidth={strokeWidth}
-        strokeDasharray={dash} strokeLinejoin="round" markerEnd={`url(#${arrowId})`} />
-    </>
+    <path d={path} fill="none" stroke={stroke} strokeWidth={strokeWidth}
+      strokeDasharray={dash} strokeLinejoin="round" />
   )
 }
