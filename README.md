@@ -653,7 +653,7 @@ interface FlowEdge {
 
 ## TypeScript Types
 
-All public types are re-exported from the package root:
+All public types are re-exported from the package:
 
 ```ts
 import type {
@@ -678,71 +678,6 @@ import type {
   NodeStyle,
   EdgeStyleTokens,
 } from 'flowcharts'
-```
-
----
-
-## Utilities & Hooks
-
-### `useFlowChart(nodes, edges)`
-
-Returns the computed layout, visited edge set, config, and resolved preset — must be called inside a `FlowChartProvider`.
-
-```ts
-const { layout, visitedEdges, config, preset, nodeMap } = useFlowChart(nodes, edges)
-
-// layout.positions: Record<id, { cx, cy }>
-// layout.width, layout.height: SVG dimensions
-// visitedEdges: Set<"sourceId->targetId">
-// preset.tokens: full ThemeTokens object
-```
-
-### `generatePath(x1, y1, x2, y2, sourceRow, edgeStyle, direction)`
-
-Generates an SVG path `d` string for an edge. Useful in custom edge renderers.
-
-```ts
-import { generatePath } from 'flowcharts'
-
-const d = generatePath(100, 50, 300, 50, 0, 'smooth', 'ltr')
-// → "M100,50 C200,50 200,50 300,50"
-```
-
-### `computeLayout(nodes, edges, nodeRadius, colGap, rowGap, direction)`
-
-Runs the layout algorithm and returns positions without rendering anything.
-
-```ts
-import { computeLayout } from 'flowcharts'
-
-const { positions, width, height } = computeLayout(nodes, edges, 22, 80, 64, 'ltr')
-```
-
-### `getPreset(mode, theme)`
-
-Returns the full `ThemePreset` object for a given mode and theme.
-
-```ts
-import { getPreset } from 'flowcharts'
-
-const preset = getPreset('pipeline', 'dark')
-// → { tokens: { node: { active: { fill: '#16A34A', ... }, ... }, ... } }
-```
-
-### `mergeThemes(base, override)`
-
-Deep-merges a partial theme override into a base preset.
-
-```ts
-import { mergeThemes, getPreset } from 'flowcharts'
-
-const myPreset = mergeThemes(getPreset('modern', 'dark'), {
-  tokens: {
-    node: {
-      active: { fill: '#7C3AED', stroke: '#A78BFA', strokeWidth: 3 }
-    }
-  }
-})
 ```
 
 ---
