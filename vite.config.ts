@@ -29,7 +29,7 @@ export default defineConfig({
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'jsxRuntime',
         },
-        // Preserve directory structure for tree-shaking
+        exports: 'named',
         preserveModules: false,
       },
     },

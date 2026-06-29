@@ -11,7 +11,6 @@
     "visualization",
     "svg",
     "pipeline",
-    "kanban",
     "process",
     "workflow",
     "typescript"
@@ -25,7 +24,7 @@
     "url": "git+https://github.com/masoudbigdeli/flowcharts.git"
   },
   "license": "MIT",
-  "author": "masoud8bigdeli@gmail.com",
+  "author": "masoud bigdeli",
   "type": "module",
   "exports": {
     ".": {
@@ -39,8 +38,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly --declaration --declarationDir dist",
