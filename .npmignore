@@ -1,0 +1,11 @@
+src/
+example/
+*.config.ts
+*.config.js
+tsconfig.json
+.gitignore
+.eslintrc*
+node_modules/
+coverage/
+*.log
+*.tsbuildinfo

@@ -1,0 +1,71 @@
+{
+  "name": "flowcharts",
+  "version": "1.0.0",
+  "description": "A highly customizable React flowchart component with preset modes, node types, edge types, label types, and full dark-theme support.",
+  "keywords": [
+    "react",
+    "flowchart",
+    "flow",
+    "diagram",
+    "graph",
+    "visualization",
+    "svg",
+    "pipeline",
+    "kanban",
+    "process",
+    "workflow",
+    "typescript"
+  ],
+  "homepage": "https://github.com/masoudbigdeli/flowcharts#readme",
+  "bugs": {
+    "url": "https://github.com/masoudbigdeli/flowcharts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masoudbigdeli/flowcharts.git"
+  },
+  "license": "MIT",
+  "author": "masoud8bigdeli@gmail.com",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --declaration --declarationDir dist",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.0.2",
+    "eslint": "^9.9.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
+}
