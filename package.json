@@ -1,6 +1,6 @@
 {
   "name": "flowcharts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A highly customizable React flowchart component with preset modes, node types, edge types, label types, and full dark-theme support.",
   "keywords": [
     "react",
@@ -24,7 +24,7 @@
     "url": "git+https://github.com/masoudbigdeli/flowcharts.git"
   },
   "license": "MIT",
-  "author": "masoud bigdeli",
+  "author": "Masoud Bigdeli",
   "type": "module",
   "exports": {
     ".": {

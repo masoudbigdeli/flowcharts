@@ -1,4 +1,4 @@
-# `@your-scope/flow-chart`
+# `flowcharts`
 
 A highly customizable React flowchart component with **6 preset modes**, **9 node types**, **6 edge types**, **5 label types**, and full dark-theme support — all composable independently.
 
@@ -41,9 +41,9 @@ A highly customizable React flowchart component with **6 preset modes**, **9 nod
 ## Installation
 
 ```bash
-npm install @your-scope/flow-chart
+npm install flowcharts
 # or
-yarn add @your-scope/flow-chart
+yarn add flowcharts
 ```
 
 ---
@@ -51,7 +51,7 @@ yarn add @your-scope/flow-chart
 ## Quick Start
 
 ```tsx
-import { FlowChart } from '@your-scope/flow-chart'
+import { FlowChart } from 'flowcharts'
 
 const nodes = [
   { id: 'a', label: 'Start',   status: 'done'    },
@@ -448,7 +448,7 @@ All three rendering surfaces — nodes, edges, and the container — can be repl
 ### Custom Node
 
 ```tsx
-import type { NodeRenderProps } from '@your-scope/flow-chart'
+import type { NodeRenderProps } from 'flowcharts'
 
 function MyNode({ node, position, radius, isActive, isDone, isPending, onClick }: NodeRenderProps) {
   const fill = isActive ? '#7C3AED' : isDone ? '#059669' : '#64748B'
@@ -475,8 +475,8 @@ function MyNode({ node, position, radius, isActive, isDone, isPending, onClick }
 ### Custom Edge
 
 ```tsx
-import type { EdgeRenderProps } from '@your-scope/flow-chart'
-import { generatePath } from '@your-scope/flow-chart'
+import type { EdgeRenderProps } from 'flowcharts'
+import { generatePath } from 'flowcharts'
 
 function MyEdge({ edge, source, sourcePosition, targetPosition, isVisited, style, direction }: EdgeRenderProps) {
   const path = generatePath(
@@ -501,7 +501,7 @@ function MyEdge({ edge, source, sourcePosition, targetPosition, isVisited, style
 ### Custom Container
 
 ```tsx
-import type { ContainerRenderProps } from '@your-scope/flow-chart'
+import type { ContainerRenderProps } from 'flowcharts'
 
 function MyContainer({ children, height }: ContainerRenderProps) {
   return (
@@ -534,7 +534,7 @@ import {
   FlowChartProvider,
   useFlowChart,
   generatePath,
-} from '@your-scope/flow-chart'
+} from 'flowcharts'
 
 function CustomRenderer({ nodes, edges }) {
   const { layout, visitedEdges, config, preset } = useFlowChart(nodes, edges)
@@ -677,7 +677,7 @@ import type {
   ThemeOverride,
   NodeStyle,
   EdgeStyleTokens,
-} from '@your-scope/flow-chart'
+} from 'flowcharts'
 ```
 
 ---
@@ -702,7 +702,7 @@ const { layout, visitedEdges, config, preset, nodeMap } = useFlowChart(nodes, ed
 Generates an SVG path `d` string for an edge. Useful in custom edge renderers.
 
 ```ts
-import { generatePath } from '@your-scope/flow-chart'
+import { generatePath } from 'flowcharts'
 
 const d = generatePath(100, 50, 300, 50, 0, 'smooth', 'ltr')
 // → "M100,50 C200,50 200,50 300,50"
@@ -713,7 +713,7 @@ const d = generatePath(100, 50, 300, 50, 0, 'smooth', 'ltr')
 Runs the layout algorithm and returns positions without rendering anything.
 
 ```ts
-import { computeLayout } from '@your-scope/flow-chart'
+import { computeLayout } from 'flowcharts'
 
 const { positions, width, height } = computeLayout(nodes, edges, 22, 80, 64, 'ltr')
 ```
@@ -723,7 +723,7 @@ const { positions, width, height } = computeLayout(nodes, edges, 22, 80, 64, 'lt
 Returns the full `ThemePreset` object for a given mode and theme.
 
 ```ts
-import { getPreset } from '@your-scope/flow-chart'
+import { getPreset } from 'flowcharts'
 
 const preset = getPreset('pipeline', 'dark')
 // → { tokens: { node: { active: { fill: '#16A34A', ... }, ... }, ... } }
@@ -734,7 +734,7 @@ const preset = getPreset('pipeline', 'dark')
 Deep-merges a partial theme override into a base preset.
 
 ```ts
-import { mergeThemes, getPreset } from '@your-scope/flow-chart'
+import { mergeThemes, getPreset } from 'flowcharts'
 
 const myPreset = mergeThemes(getPreset('modern', 'dark'), {
   tokens: {
@@ -749,4 +749,14 @@ const myPreset = mergeThemes(getPreset('modern', 'dark'), {
 
 ## License
 
-MIT
+MIT © [Masoud Bigdeli](https://github.com/masoudbigdeli)
+
+---
+
+## Author
+
+**Masoud Bigdeli** — [github.com/masoudbigdeli](https://github.com/masoudbigdeli)
+
+## Repository
+
+[github.com/masoudbigdeli/flowcharts](https://github.com/masoudbigdeli/flowcharts)
