@@ -34,7 +34,6 @@ A highly customizable React flowchart component with **6 preset modes**, **9 nod
 - [FlowChartProvider (headless)](#flowchartprovider-headless)
 - [Full Props Reference](#full-props-reference)
 - [TypeScript Types](#typescript-types)
-- [Utilities & Hooks](#utilities--hooks)
 
 ---
 
