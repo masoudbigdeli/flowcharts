@@ -1,6 +1,6 @@
 {
   "name": "flowcharts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A highly customizable React flowchart component with preset modes, node types, edge types, label types, and full dark-theme support.",
   "keywords": [
     "react",
@@ -54,13 +54,13 @@
   "devDependencies": {
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.2",
-    "vite-plugin-dts": "^4.0.2",
-    "eslint": "^9.9.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0"
+    "vite-plugin-dts": "^4.0.2"
   },
   "publishConfig": {
     "access": "public"
